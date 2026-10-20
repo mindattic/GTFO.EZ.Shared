@@ -7,7 +7,7 @@ using BepInEx.Unity.IL2CPP;
 
 namespace MindAttic.GTFO.Shared;
 
-// Code every GTFO.* mod carries its own copy of (published from GTFO.EZ by tools/publish-shared.ps1).
+// Code every GTFO.* mod compiles its own copy of (from GTFO.EZ.Shared, a git submodule in each mod).
 // With several of the mods installed, several copies run, so anything that must happen once - a
 // key press, a warden message - only happens in the first installed mod in Order. State that has
 // to be the same in every copy lives once for the whole process (Get/Set), not in a copy's statics.

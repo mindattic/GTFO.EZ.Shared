@@ -15,8 +15,8 @@ namespace MindAttic.GTFO.Shared;
 // are only as many as add up to LootPercent of the zone's resource budget, split between the three
 // kinds the way that budget is. Extras (GTFO.EZ.AbsurdItems' Loot Mix: Hand Grenades, Stim Packs) join
 // the same lottery: they come on top, at their weights' odds against the kits' own weights (1 each
-// by default), and the kits stay at LootPercent. GTFO.EZ holds the source (it doesn't run it
-// itself); GTFO.EZ.AbsurdItems runs it (Consumables Are Kits, with Loot Mix's extras).
+// by default), and the kits stay at LootPercent. Only GTFO.EZ.AbsurdItems compiles and runs it
+// (Consumables Are Kits, with Loot Mix's extras).
 internal sealed class KitLootSettings
 {
     internal string LogName = "Kits";

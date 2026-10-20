@@ -7,7 +7,7 @@ namespace MindAttic.GTFO.Shared;
 // its own [HarmonyWrapSafe] prefix on the game's packet receive (SNet_Replication.RecieveBytes): an
 // exception escaping one makes that prefix fall through to the game's own receive, which then reads
 // GTFO-API's packet as one of its own. So the handler's error is logged and dropped here instead.
-// Only for the GTFO.* mods that use GTFO-API (tools/publish-shared.ps1 publishes it to those alone).
+// Only for the GTFO.* mods that use GTFO-API (only those compile it from GTFO.EZ.Shared).
 internal static class RemoteEvents
 {
     internal static void Register<T>(string eventName, Action<ulong, T> onReceive) where T : struct =>
