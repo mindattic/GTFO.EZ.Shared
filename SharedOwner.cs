@@ -7,10 +7,11 @@ using BepInEx.Unity.IL2CPP;
 
 namespace MindAttic.GTFO.Shared;
 
-// Code every GTFO.* mod compiles its own copy of (from GTFO.EZ.Shared, a git submodule in each mod).
-// With several of the mods installed, several copies run, so anything that must happen once - a
-// key press, a warden message - only happens in the first installed mod in Order. State that has
-// to be the same in every copy lives once for the whole process (Get/Set), not in a copy's statics.
+// Code GTFO.EZ and its Absurd companions each compile their own copy of (from GTFO.EZ.Shared, a git
+// submodule in each mod). With several of the mods installed, several copies run, so anything that
+// must happen once - a key press, a warden message - only happens in the first installed mod in
+// Order. State that has to be the same in every copy lives once for the whole process (Get/Set), not
+// in a copy's statics.
 internal static class SharedOwner
 {
     internal static readonly ManualLogSource Log = Logger.CreateLogSource("MindAttic.GTFO.Shared");
@@ -26,7 +27,6 @@ internal static class SharedOwner
         "MindAttic.GTFO.EZ.AbsurdWeapons",
         "MindAttic.GTFO.EZ.AbsurdMoves",
         "MindAttic.GTFO.EZ.AbsurdItems",
-        "MindAttic.GTFO.CrashTestDummies",
     };
 
     private static bool? _isOwner;
