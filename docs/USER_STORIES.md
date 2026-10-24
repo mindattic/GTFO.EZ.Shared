@@ -28,3 +28,4 @@ _Nothing recorded yet._
 | GES-T5 | 2026-10-24 | docs | closed | Update USER_STORIES.md | — |
 | GES-T6 | 2026-10-24 | feature | closed | Insert/Delete toggle announcements always log to the console too, not just as a fallback when the event-log message fails | InfiniteToggles.cs |
 | GES-T7 | 2026-10-24 | feature | closed | Swap Insert and Delete: Insert is now infinite health, Delete is now infinite ammo | InfiniteToggles.cs |
+| GES-T8 | 2026-10-24 | docs | closed | Put GTFO.EZ.Shared on the GTFO.EZ family's vN versioning scheme, starting at v16: new CHANGELOG.md, README Versioning section | CHANGELOG.md |

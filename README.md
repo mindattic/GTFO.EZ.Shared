@@ -44,3 +44,9 @@ existing clone.
 Change it here, commit and push. Then in each mod, move the submodule to the new commit
 (`git -C external/GTFO.EZ.Shared pull origin main`), rebuild, and commit the updated submodule
 pointer. A mod keeps building against the commit it points at until then.
+
+## Versioning
+
+On the same `vN` scheme as the GTFO.EZ family (major-only bumps, no minor/patch - there's no
+Thunderstore package here to need the strict `x.y.z` form). `CHANGELOG.md` headers use the short
+`vN` form, same as every other GTFO.* repo. Current: v16.
