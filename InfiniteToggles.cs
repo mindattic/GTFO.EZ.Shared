@@ -45,16 +45,20 @@ internal static class InfiniteToggles
         Show($"{what}: {(on ? "ON" : "OFF")}");
     }
 
+    // Always in the console, not just as a fallback for when the event log message fails - so the
+    // on/off state is never just on-screen text that scrolled past.
     private static void Show(string message)
     {
         try
         {
-            if (!MessageHelper.Show(message, MessageType.EventLog)) SharedOwner.Log.LogInfo(message);
+            MessageHelper.Show(message, MessageType.EventLog);
         }
         catch (Exception e)
         {
             SharedOwner.Log.LogInfo($"{message} (no warden message: {e.Message})");
+            return;
         }
+        SharedOwner.Log.LogInfo(message);
     }
 
     // Tops every gear slot's reserve and the wielded gun's magazine back up to full.

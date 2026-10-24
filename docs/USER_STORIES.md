@@ -26,3 +26,4 @@ _Nothing recorded yet._
 | GES-T3 | 2026-10-20 | chore | open | Bug hunt: run an exhaustive /bughunt over the whole repo and fix every real bug found (each fix under its own fix ticket), then hunt again; close this only when a full pass finds nothing | user request 2026-10-20: approved repo sweep gap-fill |
 | GES-T4 | 2026-10-21 | chore | closed | Add docs | — |
 | GES-T5 | 2026-10-24 | docs | closed | Update USER_STORIES.md | — |
+| GES-T6 | 2026-10-24 | feature | closed | Insert/Delete toggle announcements always log to the console too, not just as a fallback when the event-log message fails | InfiniteToggles.cs |

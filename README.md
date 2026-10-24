@@ -10,7 +10,7 @@ into its own assembly, so players install nothing extra.
 | File | What it is | Compiled by |
 |---|---|---|
 | `SharedOwner.cs` | With several of the mods installed, picks the one that answers shared keys (the first installed of GTFO.EZ, GTFO.EZ.AbsurdWeapons, GTFO.EZ.AbsurdMoves, GTFO.EZ.AbsurdItems, GTFO.CrashTestDummies) and holds state every copy must agree on once for the whole game process. A mod whose master switch (`[0. Mod] Enabled`) is off counts as not installed. `SharedOwner.IsActive(guid)` and `SharedOwner.TryGetSetting<T>(...)` let one mod check another. | every mod |
-| `InfiniteToggles.cs` | Insert / Delete: infinite ammo and health, announced in the event log. | every mod |
+| `InfiniteToggles.cs` | Insert / Delete: infinite ammo and health, announced in the event log and always in the console too. | every mod |
 | `MessageHelper.cs` | On-screen messages for the local player: `MessageHelper.Show(text, MessageType.Warden \| EventLog \| Center \| Subtitle, seconds)`. | every mod |
 | `RemoteEvents.cs` | `RemoteEvents.Register<T>(name, handler)`: a GTFO-API network event whose handler can't throw (an exception escaping one would hand GTFO-API's packet to the game's own receive). Needs GTFO-API. | GTFO.EZ.AbsurdWeapons, GTFO.EZ.AbsurdMoves |
 | `KitLoot.cs` | Kits as consumables (GTFO.EZ.AbsurdItems' *Consumables Are Kits*, with Loot Mix's Hand Grenades and Stim Packs as extras). | GTFO.EZ.AbsurdItems |
